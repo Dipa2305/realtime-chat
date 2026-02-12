@@ -1,13 +1,22 @@
 
-const {Server} = require('ws');
+const http = require('http');
 const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 8080 });
 const PORT = process.env.PORT || 8080;
 
-Server.listen(PORT, () => {
-  console.log(`WebSocket server running on ws://localhost:${PORT}`);
+// Create HTTP server
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end("WebSocket Server Running");
 });
+
+// Attach WebSocket to HTTP server
+const wss = new WebSocket.Server({ server });
+
+server.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
 
 const userMap = new Map();
 
