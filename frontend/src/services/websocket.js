@@ -7,7 +7,7 @@ let userInfo = null;
 
 
 export const connectWebSocket = (dispatch, user) => {
-    socket = new WebSocket("ws://localhost:8080");
+    socket = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
     userInfo = user;
 
     socket.onopen = () => {
