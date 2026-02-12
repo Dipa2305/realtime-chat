@@ -8,7 +8,7 @@ let userInfo = null;
 
 export const connectWebSocket = (dispatch, user) => {
     const WS_URL = import.meta.env.VITE_WEBSOCKET_URL;
-   const socket = new WebSocket(`${WS_URL}/${user.userId}`);
+    socket = new WebSocket(`${WS_URL}/${user.userId}`);
     userInfo = user;
 
     socket.onopen = () => {
