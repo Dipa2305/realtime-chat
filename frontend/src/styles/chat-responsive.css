@@ -6,7 +6,7 @@
   }
   .chat-card {
     max-width: 900px !important;
-    width: 100% !important;
+    width: 100% !important;   
     height: 90vh !important;
     min-height: 600px !important;
     margin: 0 auto !important;
@@ -15,6 +15,7 @@
   .sidebar-section {
     min-width: 260px !important;
     max-width: 320px !important;
+    
     width: 30% !important;
   }
   .chat-section {

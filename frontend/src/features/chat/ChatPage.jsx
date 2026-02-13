@@ -185,7 +185,7 @@ const ChatPage = () => {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 bgcolor: '#f4f6fa',
-                pb: isMobile ? '80px' : 0,
+                pb: isMobile ? '110px' : 0,
               }}
             >
               <MessageList />
