@@ -29,7 +29,7 @@ const getInitials = (name) => {
     .toUpperCase();
 };
 
-const UserList = () => {
+const UserList = ({ onUserSelect }) => {
   const dispatch = useDispatch();
   const users = useSelector((state) => state.users.users);
   const myUserId = useSelector((state) => state.auth.userId);
@@ -128,7 +128,10 @@ const UserList = () => {
                 <ListItemButton
                   key={user.userId}
                   selected={user.userId === activeUserId}
-                  onClick={() => dispatch(setActiveUser(user.userId))}
+                  onClick={() => {
+                    dispatch(setActiveUser(user.userId));
+                    if (onUserSelect) onUserSelect(user.userId);
+                  }}
                 >
                   <ListItemAvatar sx={{ display: 'flex', alignItems: 'center' }}>
 

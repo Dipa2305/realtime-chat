@@ -118,7 +118,7 @@ const ChatPage = () => {
               </Avatar>
               <Typography variant="h6" fontWeight="bold">ChatApp</Typography>
             </Box>
-            <UserList />
+            <UserList onUserSelect={() => { if (isMobile) setMobileView('chat'); }} />
           </Box>
         )}
 
@@ -185,6 +185,7 @@ const ChatPage = () => {
                 flexDirection: 'column',
                 justifyContent: 'flex-start',
                 bgcolor: '#f4f6fa',
+                pb: isMobile ? '80px' : 0,
               }}
             >
               <MessageList />
