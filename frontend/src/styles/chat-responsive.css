@@ -64,7 +64,7 @@
     background: #f4f6fa !important;
     z-index: 10;
     box-shadow: none !important;
-    overflow: hidden !important;
+  
   }
   .hide-on-mobile {
     display: none !important;
