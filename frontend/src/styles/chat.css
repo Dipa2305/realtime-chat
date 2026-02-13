@@ -133,6 +133,9 @@
   margin-bottom: 0;
 }
 
+
+@import url('./chat-responsive.css');
+
 @keyframes fadeIn {
   from {
     opacity: 0;
