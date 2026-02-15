@@ -32,13 +32,9 @@ const MessageItem = ({ message }) => {
                 forwarded: true,
                 timestamp: new Date().toISOString(),
             };
-            // dispatch(sendWebSocketMessage(forwardMsg));
-
             sendWebSocketMessage(forwardMsg);
 
         });
-
-        // setForwardOpen(false);
     };
 
     return (

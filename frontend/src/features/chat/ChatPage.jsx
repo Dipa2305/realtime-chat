@@ -85,7 +85,7 @@ const ChatPage = () => {
     >
       <Paper
         className="chat-card"
-        elevation={8}
+        elevation={8} 
         sx={{
           display: 'flex',
           borderRadius: 4,

@@ -15,7 +15,6 @@ export const connectWebSocket = (dispatch, user) => {
         console.log("WebSocket connected");
         dispatch(setConnectionStatus("connected"));
         if (userInfo) {
-            // console.log('Sending join event:', userInfo);
             socket.send(JSON.stringify({
                 type: 'join',
                 userId: userInfo.userId,
